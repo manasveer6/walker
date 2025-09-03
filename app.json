@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "walker",
+    "name": "Walker",
     "slug": "walker",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,15 +8,28 @@
     "scheme": "walker",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "description": "A simple walking tracker app that helps you achieve your daily walking goals by breaking them into hourly slots.",
+    "primaryColor": "#000000",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.walker.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.walker.app",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -25,6 +38,7 @@
     },
     "plugins": [
       "expo-router",
+      "expo-notifications",
       [
         "expo-splash-screen",
         {
